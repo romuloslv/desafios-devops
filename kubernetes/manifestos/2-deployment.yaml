@@ -1,0 +1,52 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: deployment-aplicacao-idwall
+#  namespace: qa-idwall
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: aplicacao-idwall
+    spec:
+      containers:
+      - name: container-aplicacao-idwall
+        image: webserver:1.0 
+        ports:
+          - containerPort: 3000
+            protocol: TCP
+        
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+
+        env:
+          - name: NAME
+            value: "Rômulo Ferreira da Silva"
+        
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 3000
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 3
+          successThreshold: 1
+          timeoutSeconds: 5
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 3000
+            scheme: HTTP
+          initialDelaySeconds: 300
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 20
