@@ -129,11 +129,10 @@ Content-Type: text/html; charset=utf-8
 Content-Length: 31
 Connection: keep-alive
 X-Powered-By: Express
-ETag: W/"1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
+ETag: W/"i1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
 ```
 
-### Remoção do cenário atual
-
+** Remoção do cenário atual
 
 ```bash
 root@SKYNET:~/desafios-devops/kubernetes# bash kill-kbctl.sh 
@@ -145,4 +144,67 @@ namespace "qa-idwall" deleted
 deployment.apps "deployment-aplicacao-idwall" deleted
 service "servico-aplicacao-idwall" deleted
 ingress.extensions "ingress-idwall" deleted
+```
+```
+
+### Testando k8s com Helm
+
+```bash
+root@SKYNET:~/desafios-devops/kubernetes# bash run-helm.sh 
+
+[ Construindo imagem local... ]
+
+Sending build context to Docker daemon  37.89kB
+Step 1/6 : FROM node:9-alpine
+ ---> a56170f59699
+Step 2/6 : WORKDIR /src
+ ---> Using cache
+ ---> 73eff7048ecb
+Step 3/6 : COPY app/ .
+ ---> Using cache
+ ---> 1713122b9476
+Step 4/6 : RUN npm install --quiet
+ ---> Using cache
+ ---> 8a1a5448b581
+Step 5/6 : EXPOSE 3000
+ ---> Using cache
+ ---> e873ac9c8f29
+Step 6/6 : CMD ["npm", "start"]
+ ---> Using cache
+ ---> 6c2360821212
+Successfully built 6c2360821212
+Successfully tagged webserver:1.0
+$HELM_HOME has been configured at /root/.helm.
+
+Tiller (the Helm server-side component) has been upgraded to the current version.
+
+[ Instalando a aplicação... ]
+
+NAME:   devops
+LAST DEPLOYED: Tue May 21 01:43:52 2019
+NAMESPACE: qa-idwall
+STATUS: DEPLOYED
+
+RESOURCES:
+==> v1/Deployment
+NAME                 READY  UP-TO-DATE  AVAILABLE  AGE
+devops-app-idwaller  2/2    2           2          30s
+
+==> v1/Pod(related)
+NAME                                  READY  STATUS             RESTARTS  AGE
+devops-app-idwaller-647446f55b-9jv6d   1/1     Running   0          30s
+devops-app-idwaller-647446f55b-fl9n7   1/1     Running   0          30s
+
+==> v1/Service
+NAME                 TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE
+devops-app-idwaller  ClusterIP  10.111.163.25  <none>       3000/TCP  0s
+
+==> v1beta1/Ingress
+NAME                 HOSTS               ADDRESS  PORTS  AGE
+devops-app-idwaller  idwaller.devops.sp  80       0s
+
+
+NOTES:
+Acesse:
+  http://idwaller.devops.sp/
 ```
