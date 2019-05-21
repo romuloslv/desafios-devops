@@ -24,3 +24,32 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Pode se utilizar tanto AWS quanto GCP (Google Cloud), não é preciso executar o teste em ambas, somente uma.
 - Todos os recursos devem ser criados utilizando os créditos gratuitos da AWS/GCP.
 - Não esquecer de destruir os recursos após criação e testes do desafio para não haver cobranças ou esgotamento dos créditos.
+
+## Execução
+
+Clone o repositório para seu host, entre no diretório do desafio terraform
+e execute o script run-terr.sh
+
+```bash
+root@SKYNET:~# git clone https://github.com/romuloslv/desafios-devops.git
+Cloning into 'desafios-devops'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 32 (delta 0), reused 2 (delta 0), pack-reused 29
+Unpacking objects: 100% (32/32), done.
+
+root@SKYNET:~# cd /desafios-devops/terraform
+root@SKYNET:~/desafios-devops/terraform# ls
+departamentos  infra  README.md  run-terr.sh kill-terr.sh
+root@SKYNET:~/desafios-devops/terraform# bash run-terr.sh
+```
+
+Algumas informações referentes ao console de gerenciamento da AWS serão pedidas:
+
+![](https://i.imgur.com/Ff3d2ht.png)
+
+Após válidar os dados o ip público da instância é retornado:
+
+![](https://i.imgur.com/47AMKfP.png)
+
