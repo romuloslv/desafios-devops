@@ -34,8 +34,7 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 
 ## Execução
 
-Clone o repositório para seu host, entre no diretório do desafio terraform
-e execute o script run-terr.sh
+Clone o repositório para seu host, entre no diretório do desafio terraform e execute o script run-terr.sh
 
 ```bash
 root@SKYNET:~# git clone https://github.com/romuloslv/desafios-devops.git
@@ -50,11 +49,11 @@ root@SKYNET:~/desafios-devops/terraform# ls
 departamentos  infra  README.md  run-terr.sh kill-terr.sh
 root@SKYNET:~/desafios-devops/terraform# bash run-terr.sh
 ```
-Algumas informações referentes ao console de gerenciamento da AWS serão pedidas:
+Algumas informações referentes ao console de gerenciamento da AWS serão solicitadas:
 
 ![](https://i.imgur.com/Ff3d2ht.png)
 
-Após válidar os dados o ip público da instância é retornado:
+Após válidar os dados, o ip público da instância é retornado:
 
 ![](https://i.imgur.com/47AMKfP.png)
 
