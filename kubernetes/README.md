@@ -30,3 +30,12 @@ Dentro deste repositório existe um subdiretório **app** e um **Dockerfile** qu
 * A aplicação sobe por _default_ utilizando a porta **3000** e utiliza uma variável de ambiente **$NAME**
 
 * Não é necessário realizar o _upload_ da imagem Docker para um registro público, você pode construir a imagem localmente e utilizá-la diretamente.
+
+# Laboratório para execução das atividades
+
+## Pré Requisitos
+
+* [Docker](https://docs.docker.com/install/)
+* [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+* [Helm](https://helm.sh/docs/using_helm/)
