@@ -71,4 +71,48 @@ root@SKYNET:~/desafios-devops/kubernetes# bash run-kbctl.sh
 💗  kubectl is now configured to use "minikube"
 🏄  Done! Thank you for using minikube!
 
+host: Running
+
+[ Construindo imagem local... ]
+
+Sending build context to Docker daemon  35.84kB
+Step 1/6 : FROM node:9-alpine
+ ---> a56170f59699
+Step 2/6 : WORKDIR /src
+ ---> Using cache
+ ---> e2ecbb6cc58a
+Step 3/6 : COPY app/ .
+ ---> Using cache
+ ---> 452e4ba3af78
+Step 4/6 : RUN npm install --quiet
+ ---> Using cache
+ ---> 42fd868b3848
+ltep 5/6 : EXPOSE 3000
+ ---> Using cache
+ ---> 725189112fd0
+Step 6/6 : CMD ["npm", "start"]
+ ---> Using cache
+ ---> b5604ab57b66
+Successfully built b5604ab57b66
+Successfully tagged webserver:1.0
+
+[ Habilitando ingress... ]
+
+✅  ingress was successfully enabled
+
+[ Configurando seu cluster... ]
+
+namespace/qa-idwall created
+deployment.apps/deployment-aplicacao-idwall created
+service/servico-aplicacao-idwall created
+ingress.extensions/ingress-idwall created
+
+[ Acrescentando o IP no DNS local /etc/hosts ]
+
+192.168.99.111 idwaller.devops.sp
+
+[ Acesse: http://idwaller.devops.sp/ ]
+
+[ Painel: minikube dashboard --url & ]
+
 ```
