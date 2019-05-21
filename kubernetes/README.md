@@ -131,8 +131,7 @@ Connection: keep-alive
 X-Powered-By: Express
 ETag: W/"i1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
 ```
-
-**Remoção do cenário atual
+Remoção do cenário atual
 
 ```bash
 root@SKYNET:~/desafios-devops/kubernetes# bash kill-kbctl.sh 
@@ -146,7 +145,7 @@ service "servico-aplicacao-idwall" deleted
 ingress.extensions "ingress-idwall" deleted
 ```
 
-### Testando k8s com Helm
+### Deploy com o Helm
 
 ```bash
 root@SKYNET:~/desafios-devops/kubernetes# bash run-helm.sh 
@@ -206,4 +205,29 @@ devops-app-idwaller  idwaller.devops.sp  80       0s
 NOTES:
 Acesse:
   http://idwaller.devops.sp/
+```
+
+### Testando o k8s + HELM
+
+```bash
+root@SKYNET:~/desafios-devops/kubernetes# curl http://idwaller.devops.sp/ && echo -e "\n" && curl -I http://idwaller.devops.sp/
+Olá Rômulo Ferreira da Silva!
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.9
+Date: Tue, 21 May 2019 04:55:38 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+X-Powered-By: Express
+ETag: W/"1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
+```
+Remoção do cenário atual com helm
+
+```bash
+root@SKYNET:~/desafios-devops/kubernetes# bash kill-helm.sh 
+
+[ Deletando arquivos de configuração... ]
+
+release "devops" deleted
 ```
