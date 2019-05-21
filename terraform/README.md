@@ -53,8 +53,9 @@ Após válidar os dados o ip público da instância é retornado:
 
 ![](https://i.imgur.com/47AMKfP.png)
 
-```bash
-root@SKYNET:~/desafios-devops/terraform# curl -I 54.146.238.93
+Teste e desalocação dos recursos criados:
+
+root@SKYNET:~/desafios-devops/terraform# curl -I [54.146.238.93](https://i.imgur.com/3v9neOz.png)
 HTTP/1.1 200 OK
 Date: Tue, 21 May 2019 01:21:49 GMT
 Server: Apache/2.4.39 (Unix)
@@ -63,4 +64,9 @@ ETag: "2d-432a5e4a73a80"
 Accept-Ranges: bytes
 Content-Length: 45
 Content-Type: text/html
-```
+
+Para remover digite o comando abaixo
+
+root@SKYNET:~/desafios-devops/terraform# bash kill-terr.sh 
+
+[ Removendo sua infra... ](https://i.imgur.com/z8Pn7Gp.png)
