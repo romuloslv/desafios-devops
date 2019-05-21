@@ -38,13 +38,11 @@ remote: Counting objects: 100% (3/3), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 32 (delta 0), reused 2 (delta 0), pack-reused 29
 Unpacking objects: 100% (32/32), done.
-
 root@SKYNET:~# cd /desafios-devops/terraform
 root@SKYNET:~/desafios-devops/terraform# ls
 departamentos  infra  README.md  run-terr.sh kill-terr.sh
 root@SKYNET:~/desafios-devops/terraform# bash run-terr.sh
 ```
-
 Algumas informações referentes ao console de gerenciamento da AWS serão pedidas:
 
 ![](https://i.imgur.com/Ff3d2ht.png)
@@ -55,7 +53,7 @@ Após válidar os dados o ip público da instância é retornado:
 
 Teste e desalocação dos recursos criados:
 
-**root@SKYNET:~/desafios-devops/terraform# curl -I [54.146.238.93](https://i.imgur.com/3v9neOz.png)**
+***root@SKYNET:~/desafios-devops/terraform# curl -I [54.146.238.93](https://i.imgur.com/3v9neOz.png)***
 
 ```bash
 HTTP/1.1 200 OK
