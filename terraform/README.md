@@ -25,6 +25,13 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Todos os recursos devem ser criados utilizando os créditos gratuitos da AWS/GCP.
 - Não esquecer de destruir os recursos após criação e testes do desafio para não haver cobranças ou esgotamento dos créditos.
 
+# Laboratório para execução das atividades
+
+## Pré Requisitos
+
+* [Console de gerenciamento AWS](https://aws.amazon.com/pt/console/)
+* [Ferramenta IAC - Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
+
 ## Execução
 
 Clone o repositório para seu host, entre no diretório do desafio terraform
