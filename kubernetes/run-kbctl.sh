@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Para utilizar certificado, descomente as linhas com # abaixo, e nos arquivos
-# 3-service.yaml e 4-ingress.yaml dentro do diretorio desafios-devops/kubernetes/manifests
+# Para utilizar certificado, descomente as linhas com # abaixo, e nos arquivos 3-service.yaml
+# e 4-ingress.yaml dentro do diretorio desafios-devops/kubernetes/manifests
 
 minikube status | grep -i "running" -m 1
 
