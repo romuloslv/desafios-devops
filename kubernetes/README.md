@@ -39,3 +39,36 @@ Dentro deste repositório existe um subdiretório **app** e um **Dockerfile** qu
 * [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 * [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [Helm](https://helm.sh/docs/using_helm/)
+
+## Execução
+
+Clone o repositório para seu host, entre no diretório do desafio kubernetes
+e execute o script para provisionar o seu cenário: run-helm.sh ou run-kbctl.sh
+
+> OBS: Nesta solução, utilizaremos o daemon do docker como registrador de imagens locais.
+
+## Deploy com o kubernetes
+
+```bash
+root@SKYNET:~/desafios-devops/kubernetes# ls
+app  app-idwaller  Dockerfile  kill-helm.sh  kill-kbctl.sh  manifestos  README.md  run-helm.sh  run-kbctl.sh
+root@SKYNET:~/desafios-devops/kubernetes# bash run-kbctl.sh
+😄  minikube v1.0.1 on linux (amd64)
+🤹  Downloading Kubernetes v1.14.1 images in the background ...
+💡  Tip: Use 'minikube start -p <name>' to create a new cluster, or 'minikube delete' to delete this one.
+🔄  Restarting existing virtualbox VM for "minikube" ...
+⌛  Waiting for SSH access ...
+📶  "minikube" IP address is 192.168.99.111
+🐳  Configuring Docker as the container runtime ...
+🐳  Version of container runtime is 18.06.3-ce
+⌛  Waiting for image downloads to complete ...
+✨  Preparing Kubernetes environment ...
+🚜  Pulling images required by Kubernetes v1.14.1 ...
+🔄  Relaunching Kubernetes v1.14.1 using kubeadm ... 
+⌛  Waiting for pods: apiserver proxy etcd scheduler controller dns
+📯  Updating kube-proxy configuration ...
+🤔  Verifying component health ......
+💗  kubectl is now configured to use "minikube"
+🏄  Done! Thank you for using minikube!
+
+```
