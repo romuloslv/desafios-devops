@@ -232,5 +232,6 @@ root@SKYNET:~/desafios-devops/kubernetes# bash kill-helm.sh
 release "devops" deleted
 ```
 
->> [Describe pods](https://i.imgur.com/IiDjaqY.png)
->> [Describe pods](https://i.imgur.com/mzLFYVi.png)
+>> [Descrição dos pods](https://i.imgur.com/IiDjaqY.png)
+>> [Descrição dos pods](https://i.imgur.com/mzLFYVi.png)
+>> [Descrição do diretório](https://i.imgur.com/mzLFYVi.png)
