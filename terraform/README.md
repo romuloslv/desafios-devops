@@ -49,9 +49,10 @@ root@SKYNET:~/desafios-devops/terraform# ls
 departamentos  infra  README.md  run-terr.sh kill-terr.sh
 root@SKYNET:~/desafios-devops/terraform# bash run-terr.sh
 ```
-Algumas informações referentes ao console de gerenciamento da AWS serão solicitadas:
+Algumas informações referentes ao console de gerenciamento da AWS serão solicitadas, ao lado conseguimos enxergar
+a árvore de diretório do nosso desafio.
 
-![](https://i.imgur.com/Ff3d2ht.png)
+![](https://i.imgur.com/IVKC3Qa.png)
 
 Após válidar os dados, o ip público da instância é retornado:
 
