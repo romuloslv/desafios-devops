@@ -70,4 +70,4 @@ Para remover digite o comando abaixo
 ```bash
 root@SKYNET:~/desafios-devops/terraform# bash kill-terr.sh 
 ```
-[ Removendo sua infra... ](https://i.imgur.com/z8Pn7Gp.png)
+[ Removendo a infra... ](https://i.imgur.com/z8Pn7Gp.png)
