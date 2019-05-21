@@ -116,3 +116,9 @@ ingress.extensions/ingress-idwall created
 [ Painel: minikube dashboard --url & ]
 
 ```
+
+** Teste k8s  **
+
+```bash
+root@SKYNET:~/desafios-devops/kubernetes# curl http://idwaller.devops.sp/ && echo -e "\n" && curl -I http://idwaller.devops.sp/
+```
