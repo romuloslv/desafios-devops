@@ -117,8 +117,18 @@ ingress.extensions/ingress-idwall created
 
 ```
 
-** Teste k8s  **
+** Teste k8s **
 
 ```bash
 root@SKYNET:~/desafios-devops/kubernetes# curl http://idwaller.devops.sp/ && echo -e "\n" && curl -I http://idwaller.devops.sp/
+Olá Rômulo Ferreira da Silva!
+
+HTTP/1.1 200 OK
+Server: nginx/1.15.9
+Date: Tue, 21 May 2019 04:04:14 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 31
+Connection: keep-alive
+X-Powered-By: Express
+ETag: W/"1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
 ```
