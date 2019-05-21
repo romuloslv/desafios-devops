@@ -114,7 +114,6 @@ ingress.extensions/ingress-idwall created
 [ Acesse: http://idwaller.devops.sp/ ]
 
 [ Painel: minikube dashboard --url & ]
-
 ```
 
 ### Testando k8s
@@ -132,7 +131,9 @@ Connection: keep-alive
 X-Powered-By: Express
 ETag: W/"1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
 ```
-Remoção do cenário atual
+
+### Remoção do cenário atual
+
 
 ```bash
 root@SKYNET:~/desafios-devops/kubernetes# bash kill-kbctl.sh 
