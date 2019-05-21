@@ -132,7 +132,7 @@ X-Powered-By: Express
 ETag: W/"i1f-2WVazwZO7bS8GbrbTuBCC0hCr1g"
 ```
 
-** Remoção do cenário atual
+**Remoção do cenário atual
 
 ```bash
 root@SKYNET:~/desafios-devops/kubernetes# bash kill-kbctl.sh 
@@ -144,7 +144,6 @@ namespace "qa-idwall" deleted
 deployment.apps "deployment-aplicacao-idwall" deleted
 service "servico-aplicacao-idwall" deleted
 ingress.extensions "ingress-idwall" deleted
-```
 ```
 
 ### Testando k8s com Helm
