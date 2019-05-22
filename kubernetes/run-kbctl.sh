@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Para utilizar certificado, descomente as linhas com # abaixo, e nos arquivos 3-service.yaml
-# e 4-ingress.yaml dentro do diretorio desafios-devops/kubernetes/manifests
+# e 4-ingress.yaml dentro do diretorio desafios-devops/kubernetes/manifestos
 
 minikube status | grep -i "running" -m 1
 
@@ -23,19 +23,14 @@ minikube addons enable ingress
 echo -e "\n[ Configurando seu cluster... ]\n"
 kubectl create -f manifestos/.  --namespace qa-idwall
 #kubectl create secret tls tls-certificate --key tls.key --cert tls.crt --namespace qa-idwall
+echo -e "\n[ Aguarde 30s... ]\n" && sleep 30
 
-echo -e "\n[ Acrescentando o IP no DNS local /etc/hosts ]\n"
+kubectl get pods -n qa-idwall && echo ""
+kubectl get deploy -n qa-idwall && echo ""
+kubectl get services -n qa-idwall && echo ""
+kubectl get ingress -n qa-idwall && echo ""
+
+echo -e "[ Acrescentando o IP no DNS local /etc/hosts ]\n"
 echo "$(minikube ip) idwaller.devops.sp" | tee -a /etc/hosts
-echo -e "\\n[ Acesse: http://idwaller.devops.sp/ ]\n"
+echo -e "\n[ Acesse: http://idwaller.devops.sp/ ]\n"
 echo -e "[ Painel: minikube dashboard --url & ]\n"
-
-sleep 30
-
-kubectl get pods -n qa-idwall
-echo ""
-kubectl get deploy -n qa-idwall
-echo ""
-kubectl get services -n qa-idwall
-echo ""
-kubectl get ingress -n qa-idwall
-echo ""
