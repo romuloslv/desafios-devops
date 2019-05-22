@@ -23,7 +23,7 @@ minikube addons enable ingress
 echo -e "\n[ Configurando seu cluster... ]\n"
 kubectl create -f manifestos/.  --namespace qa-idwall
 #kubectl create secret tls tls-certificate --key tls.key --cert tls.crt --namespace qa-idwall
-echo -e "\n[ Aguarde 30s... ]\n" && sleep 30
+echo -e "\n[ Aguarde 1m... ]\n" && sleep 60
 
 kubectl get pods -n qa-idwall && echo ""
 kubectl get deploy -n qa-idwall && echo ""
