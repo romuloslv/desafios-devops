@@ -107,6 +107,21 @@ deployment.apps/deployment-aplicacao-idwall created
 service/servico-aplicacao-idwall created
 ingress.extensions/ingress-idwall created
 
+[ Aguarde 1m... ]
+
+NAME                                           READY   STATUS    RESTARTS   AGE
+deployment-aplicacao-idwall-7d48cd5558-rsg8q   1/1     Running   0          41s
+deployment-aplicacao-idwall-7d48cd5558-w9cp4   1/1     Running   0          41s
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment-aplicacao-idwall   2/2     2            2           42s
+
+NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+servico-aplicacao-idwall   ClusterIP   10.110.110.55   <none>        80/TCP    42s
+
+NAME             HOSTS                ADDRESS   PORTS   AGE
+ingress-idwall   idwaller.devops.sp             80      42s
+
 [ Acrescentando o IP no DNS local /etc/hosts ]
 
 192.168.99.111 idwaller.devops.sp
