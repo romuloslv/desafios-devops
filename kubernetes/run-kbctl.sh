@@ -27,4 +27,15 @@ kubectl create -f manifestos/.  --namespace qa-idwall
 echo -e "\n[ Acrescentando o IP no DNS local /etc/hosts ]\n"
 echo "$(minikube ip) idwaller.devops.sp" | tee -a /etc/hosts
 echo -e "\\n[ Acesse: http://idwaller.devops.sp/ ]\n"
-echo -e "\n[ Painel: minikube dashboard --url & ]\n"
+echo -e "[ Painel: minikube dashboard --url & ]\n"
+
+sleep 30
+
+kubectl get pods -n qa-idwall
+echo ""
+kubectl get deploy -n qa-idwall
+echo ""
+kubectl get services -n qa-idwall
+echo ""
+kubectl get ingress -n qa-idwall
+echo ""
