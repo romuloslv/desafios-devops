@@ -6,7 +6,6 @@ if [ $? -ne 1 ]
 then
 	echo -e "\n[ Removendo configuração... ]\n"
 	kubectl delete namespace qa-idwall
-	docker rmi -f webserver:1.0
 fi
 
 if [ -e tls* ]

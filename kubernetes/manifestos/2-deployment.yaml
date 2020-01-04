@@ -1,13 +1,18 @@
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1 
 kind: Deployment
 metadata:
   name: deployment-aplicacao-idwall
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      #app: web
+      name: aplicacao-idwall
   template:
     metadata:
       labels:
+        #app: web
         name: aplicacao-idwall
     spec:
       containers:
@@ -24,7 +29,7 @@ spec:
           requests:
             memory: "128Mi"
             cpu: "100m"
-
+        
         env:
           - name: NAME
             value: "Rômulo Ferreira da Silva"
